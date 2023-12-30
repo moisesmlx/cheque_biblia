@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cheque Bíblia</title>
+    
+</head>
+<body>
+    <div style="text-align: center; background-color: aquamarine;">
+        <h1>Foi checado <font color="green">{{que_palavra}}</font></h1>
+        
+        <h2>Sua pesquisa está ai abaixo e você pode selecionar com o mause e copiar o verso quiser,<br>
+        e assim fazer seu esbolso.
+        <font color="green">Obrigado por usar nosso site ajude-nos compartilhando com seus amigos</font>
+        </h2><br>
+    
+        <textarea n cols="100" rows="30" style="color: blue;">{{texto}}</textarea>
+        <h2>{{contia}}</h2><br>
+        {% csrf_token %}
+        <a href="javascript: history.go(-1)">Voltar</a>
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1380471728211177"
+        crossorigin="anonymous"></script>
+    </div><br>
+</body>
+</html>
+

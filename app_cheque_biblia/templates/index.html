@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="refresh" content="60" />
+    <title>Cheque Bíblia</title>
+    <link rel="stylesheet" href="static/css/style.css">
+</head>
+<body>
+    <img src="./static/logo.png", width="200", height="100">
+
+    <h1>Cheque Bíblia</h1><br>
+
+    <h2>Faça busca de versiculos com palavras específicas como: amor, salvação, oferta...<br>
+        Também é possivel checar frases bíblicas, e terá como retorno o <font color="green">livro, capítulo, e versículo</font> 
+        onde estiver está frase.<br>
+        Lembrando que a tradução da biblia deste site é de João Ferreira de Almeida revista e atualizada.<br>
+    </h2>
+
+    <form action="{%url 'pesquisa'%}" method="post">
+        <div>
+            Digite aqui a palavra ou frase e click em buscar
+            <input type="text" name="p" placeholder="Digite sua busca aqui"><br>
+            <input type="submit">
+            {% csrf_token %}
+        </div>
+        
+    </form>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1380471728211177"
+    crossorigin="anonymous"></script>
+</body>
+</html>
