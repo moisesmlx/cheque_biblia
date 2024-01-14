@@ -1,3 +1,4 @@
 from django.db import models
 
-# Create your models here.
+class Cheque_Palavra(models.Model):
+    palavra = models.CharField(max_length=200)

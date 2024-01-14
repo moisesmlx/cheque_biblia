@@ -2,7 +2,6 @@ from tkinter import *
 import os
 from tkinter import scrolledtext
 from tkinter import messagebox
-import clipboard
 import threading
 
 checagem = ''
@@ -87,5 +86,8 @@ Lembre_se de começar com letra maiúscula os nomes próprio, e de usar a acentu
             contidade_cap_verso = f'Foram encontrados {len(self.textos)} versículos com a palavra ou frase "{p}"'
         
         checagem = self.text_area.get(1.0, END)
-        threading.Thread(target=self).start()
+        #threading.Thread(target=p).start()
+
+if __name__ == '__main__':
+    Cheque_Palavras('fé')
  
