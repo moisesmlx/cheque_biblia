@@ -3,25 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="refresh" content="60" />
     <title>Cheque Bíblia</title>
-    
+    <link rel="stylesheet" href="./static/css/style.css">
+    <meta name="viewport" content="width=device-width">
 </head>
 <body>
-    <div style="text-align: center; background-color: aquamarine;">
-        <h1>Foi checado <font color="green">{{que_palavra}}</font></h1>
-        
-        <h2>Sua pesquisa está ai abaixo e você pode selecionar com o mause e copiar o verso quiser,<br>
-        e assim fazer seu esbolso.
-        <font color="green">Obrigado por usar nosso site ajude-nos compartilhando com seus amigos</font>
-        </h2><br>
-    
-        <textarea n cols="100" rows="30" style="color: blue;">{{texto}}</textarea>
-        <h2>{{contia}}</h2><br>
-        {% csrf_token %}
-        <a href="javascript: history.go(-1)">Voltar</a>
-        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1380471728211177"
-        crossorigin="anonymous"></script>
-    </div><br>
+    <!-- link do site https://bit.ly/cheque-biblia -->
+    <img src="./static/logo.png", width="200", height="100">
+
+    <!-- anuncios Adcash -->
+    <script type="text/javascript">
+    aclib.runAutoTag({
+        zoneId: 'kzrllbylxu',
+    });
+    </script>
+
+
+    <h1>Cheque Bíblia</h1><br>
+
+    <p>Faça busca de versiculos com palavras específicas como: amor, salvação, oferta...<br>
+        Também é possivel checar frases bíblicas, e terá como retorno o <font color="green">livro, capítulo, e versículo</font>
+        onde estiver está frase.<br>
+        Lembrando que a tradução da biblia deste site é de João Ferreira de Almeida revista e atualizada.<br>
+    </p>
+
+    <form action="{%url 'pesquisa'%}" method="post">
+        <div>
+            Digite aqui a palavra ou frase e click em buscar
+            <input type="text" name="p" placeholder="Digite sua busca aqui">
+
+            <input type="submit" value="Buscar"><br><br>
+
+            compartilhar:<br>
+        <a href="https://www.facebook.com/sharer/sharer.php?u=https://bit.ly/cheque-biblia">
+	    <img width="25" height="25" src="./static/facebook.png" alt="">
+        </a>
+
+        <a href="https://api.whatsapp.com/send?text=Acesse este link para fazer pesquisa de palavras ou frases bíblicas: https://bit.ly/cheque-biblia">
+	    <img width="25" height="25" src="./static/whatsaap.png" alt="">
+        </a>
+
+            {% csrf_token %}
+        </div>
+
+    </form>
+
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1380471728211177"
+    crossorigin="anonymous"></script>
 </body>
 </html>
-
